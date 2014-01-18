@@ -16,15 +16,16 @@ public class AutozoomScript : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		if(playerFollow) {
-			objects.Add(Player.entity[0]);
-			objects.Add(Player.entity[1]);
-		}
+
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-
+		if(playerFollow) {
+			objects.Add(Player.entity[0]);
+			objects.Add(Player.entity[1]);
+			playerFollow = false;
+		}
 	
 		calcBoundingBox();
 	
